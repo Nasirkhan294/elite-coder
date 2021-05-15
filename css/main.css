@@ -550,6 +550,7 @@
    .home-text h1 {
      font-size: 50px;
      text-transform: capitalize;
+     font-family: "Galada", cursive;
 
    }
    .home-text h2 {
@@ -607,7 +608,7 @@
 
    .about-img .img-box img {
      width: 100%;
-     border-radius: 10%;
+     border-radius: 5%;
    }
    
    .about-text h3 {
@@ -753,9 +754,11 @@
    .portfolio-section {
      padding-bottom: 50px;
    }
-   .portfolio-item {
-     width: calc((100% / 3) - 30px);
-     margin: 0 15px 30px;
+
+   .portfolio-item-wrapper {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 2rem;
    }
 
    .portfolio-item-thumbnail {
@@ -880,6 +883,15 @@
   padding: 0 15px;
 }
 
+.contact-info-item a {
+  color: var(--blue-dark);
+}
+
+.contact-info-item a:hover {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
 .contact-form .input-group {
   width: 100%;
   margin-bottom: 30px;
@@ -945,4 +957,96 @@
   background-color: var(--main-color);
   border-color: var(--white-alpha-40);
   transition: all 0.8s ease;
+}
+
+
+/*  Responsive  */
+@media(max-width: 991px) {
+  .home-text,
+  .home-img  {
+    width: 100%;
+  }
+
+  .home-text {
+    text-align: center;
+  }
+
+  .home-img {
+    order: -1;
+  }
+
+  .home-img .img-box {
+    max-width: 250px;
+  }
+
+  .home-text .btn {
+    margin: 0 7px 15px;
+  }
+
+  .portfolio-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+}
+
+@media(max-width: 767px) {
+  .contact-form,
+  .contact-info,
+  .about-text,
+  .about-img  {
+    width: 100%;
+  }
+
+  .about-text {
+    margin-top: 30px;
+  }
+
+  .portfolio-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .pp-inner {
+    padding: 30px 15px;
+  }
+  
+  .contact-info {
+    order: -1;
+  }
+
+  .home-text h1 {
+    font-size: 36px;
+  }
+
+
+}
+
+@media (max-width: 575px) {
+  .section-title h2,
+  .header .nav-inner ul li a {
+    font-size: 35px;
+  }
+
+  .home-img .img-box {
+    max-width: 200px;
+  }
+
+  .home-text h1 {
+    font-size: 30px;
+  }
+
+  .home-text h2 {
+    font-size: 18px;
+  }
+
+  .pp-header h3 {
+    font-size: 20px;
+  }
+
+  .contact-info-item .social-links a {
+    margin: 6px 1px 0 0;
+  }
 }
