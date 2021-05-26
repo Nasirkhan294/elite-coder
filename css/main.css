@@ -23,8 +23,8 @@
          margin: 0;
          outline: none;
      }
-     ::before,
-     ::after {
+     *:before,
+     *:after {
        box-sizing: border-box;
      }
   
@@ -40,6 +40,7 @@
         overflow-x: hidden;
         --webkit-top-hightlight-color: transparent; 
         padding: 35px 15px;
+        user-select: none;
       } 
 
       body.hide-scrolling {
@@ -973,6 +974,7 @@
   color: var(--blue-dark);
   border: 1px solid transparent;
   transition: border-color 0.3s ease;
+  caret-color: var(--main-color);
 }
 
 .contact-form .input-control:focus {
