@@ -257,12 +257,15 @@
       }
     }
 
-    @keyframes spin {
+    @keyframes rainbow {
       0% {
-        transform: rotate(0deg);
-      }      
+        color: var(--blue-dark);
+      }
+      50% {
+        color: var(--main-color);
+      }
       100% {
-        transform: rotate(360deg);
+        color: var(--blue);
       }
     }
 
@@ -618,6 +621,8 @@
      font-size: 50px;
      text-transform: capitalize;
      font-family: 'Galada', cursive;
+     animation: rainbow 5s linear 2s infinite;
+     transition: ease-in-out;
    }
    .home-text h2 {
      font-size: 20px;
