@@ -259,13 +259,13 @@
 
     @keyframes rainbow {
       0% {
-        color: var(--blue-dark);
+        color: var(--orange);
       }
       50% {
         color: var(--main-color);
       }
       100% {
-        color: var(--blue);
+        color: var(--pink-light);
       }
     }
 
@@ -623,6 +623,7 @@
      font-family: 'Galada', cursive;
      animation: rainbow 5s linear 2s infinite;
      transition: ease-in-out;
+     margin: 0;
    }
    .home-text h2 {
      font-size: 20px;
